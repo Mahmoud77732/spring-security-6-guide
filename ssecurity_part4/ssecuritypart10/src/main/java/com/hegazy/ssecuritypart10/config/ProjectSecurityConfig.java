@@ -27,6 +27,8 @@ public class ProjectSecurityConfig {
          http.formLogin(withDefaults());
          http.httpBasic(withDefaults());
          http.csrf(csrf -> csrf.disable());
+         // allow HTTP not HTTPS only
+         http.redirectToHttps(httpsConfig -> httpsConfig.disable());
         return http.build();
     }
 

@@ -12,6 +12,7 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.password.HaveIBeenPwnedRestApiPasswordChecker;
+import org.springframework.security.web.util.matcher.AnyRequestMatcher;
 
 @Configuration
 @Profile("prod")
@@ -24,9 +25,11 @@ public class ProjectSecurityProdConfig {
                         .requestMatchers("/myAccount", "/myBalance", "/myLoans", "/myCards").authenticated()
                         .requestMatchers("/notices", "/contact", "/myLoans", "/myCards", "/register", "/error").permitAll()
         );
-         http.formLogin(withDefaults());
-         http.httpBasic(withDefaults());
-         http.csrf(csrf -> csrf.disable());
+        http.formLogin(withDefaults());
+        http.httpBasic(withDefaults());
+        http.csrf(csrf -> csrf.disable());
+        // force HTTPS protocol
+        http.redirectToHttps(httpsConfig -> httpsConfig.requestMatchers(AnyRequestMatcher.INSTANCE));
         return http.build();
     }
 
