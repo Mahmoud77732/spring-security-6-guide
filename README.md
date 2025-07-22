@@ -28,9 +28,15 @@ spring-security-6-guide/
 │   ├── ssecuritypart2/                 # Endpoint Protection
 │   ├── ssecuritypart3/                 # User Management
 │   └── ssecuritypart4/                 # Advanced Configuration
-└── ssecurity_part2/                    # Part 2: Advanced Authentication
-    ├── ssecuritypart5/                 # JDBC Authentication
-    └── ssecuritypart6/                 # Custom Database Authentication
+├── ssecurity_part2/                    # Part 2: Advanced Authentication
+│   ├── ssecuritypart5/                 # JDBC Authentication
+│   └── ssecuritypart6/                 # Custom Database Authentication
+├── ssecurity_part3/                    # Part 3: Custom DB & Advanced Profiles
+│   ├── ssecuritypart7/                 # Custom DB Authentication Example
+│   ├── ssecuritypart8/                 # Custom Auth Provider Example
+│   └── ssecuritypart9/                 # Advanced Profiles & Auth
+└── ssecurity_part4/                    # Part 4: (Future/Advanced Topics)
+    └── ssecuritypart10/                # Coming Soon
 ```
 
 Each subdirectory contains a standalone Spring Boot project with its own README and code.
@@ -103,13 +109,43 @@ Each subdirectory contains a standalone Spring Boot project with its own README 
 - **Form and HTTP Basic Authentication**: Multiple authentication methods
 - [See detailed README](./ssecurity_part2/ssecuritypart6/README.md)
 
+### Part 3: Custom DB & Advanced Profiles
+
+#### 7. ssecuritypart7: Custom DB Authentication Example
+- Custom user authentication using a MySQL database
+- Secure password storage with bcrypt
+- RESTful API endpoints for account, balance, loans, cards, notices, contact, and user registration
+- Role-based access control
+- CSRF protection disabled for API testing
+- [See detailed README](./ssecurity_part3/ssecuritypart7/README.md)
+
+#### 8. ssecuritypart8: Custom Auth Provider Example
+- Custom authentication provider using database-backed user details
+- Secure password storage with BCrypt
+- RESTful API endpoints for banking operations
+- Role-based access control for endpoints
+- User registration with password hashing
+- [See detailed README](./ssecurity_part3/ssecuritypart8/README.md)
+
+#### 9. ssecuritypart9: Advanced Profiles & Auth
+- Custom authentication providers for different profiles (default and prod)
+- User registration with password encoding
+- Profile-based security configuration
+- REST endpoints for account, balance, cards, loans, notices, and contact
+- [See detailed README](./ssecurity_part3/ssecuritypart9/README.md)
+
+### Part 4: (Future/Advanced Topics)
+
+#### 10. ssecuritypart10: Coming Soon
+- Details and documentation for this part will be added in a future update.
+
 ---
 
 ## Prerequisites
-- Java 21+ (for parts 1-4), Java 17+ (for parts 5-6)
+- Java 21+ (for parts 1-4), Java 17+ (for parts 5-10)
 - Maven 3.8+
-- MySQL 8.0+ (for parts 5-6)
-- Docker (optional, for MySQL container in part 5)
+- MySQL 8.0+ (for database-backed parts)
+- Docker (optional, for MySQL container in some parts)
 
 ---
 
