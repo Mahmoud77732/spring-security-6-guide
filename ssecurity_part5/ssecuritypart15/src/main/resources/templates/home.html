@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}" />
+</head>
+<body>
+    <header>
+        <nav>
+            <a th:href="@{/}">Home</a> |
+            <a th:href="@{/contact}">Contact</a> |
+            <a th:href="@{/myBalance}">Balance</a> |
+            <a th:href="@{/myLoans}">Loans</a> |
+            <a th:href="@{/myCards}">Cards</a> |
+            <a th:href="@{/myAccount}">Account</a> |
+            
+            <!-- Show Login link when not authenticated -->
+            <a th:href="@{/login}" sec:authorize="!isAuthenticated()">Login</a>
+            
+            <!-- Show username and logout when authenticated -->
+            <span sec:authorize="isAuthenticated()">
+                Welcome, <span th:text="${#authentication.name}">User</span> |
+                <form th:action="@{/logout}" method="post" style="display:inline; margin-left:10px;">
+                    <button type="submit" style="background:none; border:none; color:blue; text-decoration:underline; cursor:pointer; padding:0;">Logout</button>
+                </form>
+            </span>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to the Home Page</h1>
+        <p>This page is public. Some links above require login.</p>
+    </main>
+</body>
+</html> 
