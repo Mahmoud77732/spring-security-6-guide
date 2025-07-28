@@ -1,4 +1,4 @@
-package com.hegazy.ssecuritypart16.model;
+package com.hegazy.ssecuritypart18.model;
 
 
 import jakarta.persistence.*;
