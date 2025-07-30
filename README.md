@@ -23,7 +23,7 @@ This repository is a learning resource for Spring Security 6, featuring step-by-
 
 ```
 spring-security-6-guide/
-├── ssecurity_part1/                    # Part 1: Basic Security Concepts
+├── ssecurity_basics_1/                 # Part 1: Basic Security Concepts
 │   ├── ssecuritypart1/                 # Basic Security Setup
 │   ├── ssecuritypart2/                 # Endpoint Protection
 │   ├── ssecuritypart3/                 # User Management
@@ -35,21 +35,23 @@ spring-security-6-guide/
 │   ├── ssecuritypart7/                 # Custom DB Authentication Example
 │   ├── ssecuritypart8/                 # Custom Auth Provider Example
 │   └── ssecuritypart9/                 # Advanced Profiles & Auth
-└── ssecurity_part4/                    # Part 4: (Future/Advanced Topics)
+└── ssecurity_part4/                    # Part 4: 
 |    └── ssecuritypart10/               # Coming Soon
-|    └── ssecuritypart11/
-|    └── ssecuritypart12/
-|    └── ssecuritypart13/
-└── ssecurity_part5/
-|    └── ssecuritypart14/
-|    └── ssecuritypart15/
-└── ssecurity_part6/
-|    └── ssecuritypart16/
-└── ssecurity_part7/
-|    └── ssecuritypart17/
-|    └── ssecuritypart18/
-└── ssecurity_part8/
-|    └── ssecuritypart19/
+|    └── ssecuritypart11/               #
+|    └── ssecuritypart12/               #
+|    └── ssecuritypart13/               #
+└── ssecurity_part5/                    #
+|    └── ssecuritypart14/               #
+|    └── ssecuritypart15/               #
+└── ssecurity_part6/                    #
+|    └── ssecuritypart16/               #
+└── ssecurity_part7/                    #
+|    └── ssecuritypart17/               #
+|    └── ssecuritypart18/               #
+└── ssecurity_part8/                    # Part 8: Focus on filters
+|    └── ssecuritypart19/               # Implement {Before, After, At} filters on the requests
+└── ssecurity_jwt_9/                    # Part 9: Focus on JWT
+|    └── spring-security-jwt-20/        # How to implement and secure REST APIs using JWT
 ```
 
 Each subdirectory contains a standalone Spring Boot project with its own README and code.
