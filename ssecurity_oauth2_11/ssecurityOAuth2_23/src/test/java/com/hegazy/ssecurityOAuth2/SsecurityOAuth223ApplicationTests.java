@@ -1,10 +1,10 @@
-package com.hegazy.ssecuritypart22;
+package com.hegazy.ssecurityOAuth2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Ssecuritypart22ApplicationTests {
+class SsecurityOAuth223ApplicationTests {
 
 	@Test
 	void contextLoads() {
